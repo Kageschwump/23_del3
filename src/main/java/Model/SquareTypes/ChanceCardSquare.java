@@ -5,6 +5,9 @@ import Model.Player;
 
 public class ChanceCardSquare extends GameSquare {
 
+    private String name;
+    private int squareNumber;
+
     @Override
     public void function(Player player) {
 
