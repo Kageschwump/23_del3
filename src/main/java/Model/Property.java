@@ -12,4 +12,7 @@ public class Property {
 
     public void setOwner(Player player){}
 
+    public Color getColor() {
+        return color;
+    }
 }
