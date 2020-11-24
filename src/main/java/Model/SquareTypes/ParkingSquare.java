@@ -14,7 +14,7 @@ public class ParkingSquare extends GameSquare {
 
     public ParkingSquare()
     {
-        fieldType = new GUI_Empty(Color.WHITE, Color.GRAY, name, "", "Peter park here");
+        fieldType = new GUI_Empty(Color.WHITE, Color.black, name, "", "Peter park here");
     }
 
     @Override
