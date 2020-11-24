@@ -23,11 +23,6 @@ public class GameHandler {
 
     public void startGame()
     {
-        ChanceCardHandler chanceCardHandler = new ChanceCardHandler();
-        Dice dice = new Dice();
-        PlayerHandler playerHandler = new PlayerHandler();
-        GuiHandler guiHandler = new GuiHandler();
-
 
     }
 

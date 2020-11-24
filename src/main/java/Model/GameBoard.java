@@ -24,6 +24,7 @@ public class GameBoard {
     public GameBoard()
     {
         squares = new GameSquare[24];
+        createGameBoard();
     }
 
     public void createGameBoard()
