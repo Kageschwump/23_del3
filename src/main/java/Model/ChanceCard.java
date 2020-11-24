@@ -2,13 +2,10 @@ package Model;
 
 import Model.Player.Player;
 
-public class ChanceCard {
-    private String desc;
+public abstract class ChanceCard {
 
-    public ChanceCard(String desc){
 
-    }
-    public void cardFunction(Player player){
+    public abstract void cardFunction(Player player);
 
-    }
+
 }

@@ -14,7 +14,7 @@ public class ChanceCardSquare extends GameSquare {
 
     private String name = "Chance";
     private String subText = "Grab a card";
-    private String description = "Grap a card and you might get lucky";
+    private String description = "Grab a card and you might get lucky";
     private Color bgColor = Color.GRAY;
     private Color fgColor = Color.WHITE;
     private GUI_Field fieldType;
