@@ -28,6 +28,6 @@ public class GuiHandler
 
     public void guiMenu()
     {
-
+        gui.getUserButtonPressed("How many players?","2","3","4");
     }
 }

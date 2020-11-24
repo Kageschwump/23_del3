@@ -16,12 +16,13 @@ public class GameHandler {
         this.playerHandler = new PlayerHandler();
     }
 
-    public void round(){
+    public void round()
+    {
 
     }
 
-    public void startGame(){
-
+    public void startGame()
+    {
 
     }
 
@@ -29,4 +30,9 @@ public class GameHandler {
 
         return 0;
     }
+
+    public GameBoard getGameBoard() {
+        return gameBoard;
+    }
+
 }
