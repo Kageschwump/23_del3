@@ -2,17 +2,25 @@ package Model.SquareTypes;
 
 import Model.GameSquare;
 import Model.Player;
+import gui_fields.GUI_Empty;
 import gui_fields.GUI_Field;
+import gui_fields.GUI_Street;
+
+import java.awt.*;
 
 public class ParkingSquare extends GameSquare {
 
     private String name;
-    private int squareNumber;
     private GUI_Field fieldType;
+
+    public ParkingSquare()
+    {
+        fieldType = new GUI_Empty(Color.WHITE, Color.GRAY, name, "", "Peter park here");
+    }
 
     @Override
     public void function(Player player) {
-
+        
     }
 
     @Override
