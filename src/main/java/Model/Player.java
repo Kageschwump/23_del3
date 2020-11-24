@@ -14,10 +14,10 @@ public class Player {
     private int placement;
     private Property[] properties = new Property[16];
 
-    public Player(int id, String name, GUI_Player player, GUI_Car car, Account account){
+    public Player(int id, String name, GUI_Car car, Account account){
         this.name = name;
         this.id = id;
-        this.player = player;
+        this.player = new GUI_Player(name, 0,car);
         this.car = car;
         this.account = account;
     }
