@@ -1,5 +1,7 @@
 package Model;
 
+import Model.Player.Player;
+
 public class RuleSet {
 
     public boolean checkForPropertyPair(Player player)

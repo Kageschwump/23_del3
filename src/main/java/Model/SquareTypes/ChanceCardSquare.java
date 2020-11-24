@@ -2,7 +2,7 @@ package Model.SquareTypes;
 
 import Controller.ChanceCardHandler;
 import Model.GameSquare;
-import Model.Player;
+import Model.Player.Player;
 import gui_fields.GUI_Chance;
 import gui_fields.GUI_Field;
 

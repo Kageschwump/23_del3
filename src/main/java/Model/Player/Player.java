@@ -1,4 +1,4 @@
-package Model;
+package Model.Player;
 
 import Model.SquareTypes.Property;
 import gui_fields.GUI_Car;

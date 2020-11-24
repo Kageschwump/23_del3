@@ -1,6 +1,6 @@
 package Controller;
 
-import Model.Player;
+import Model.Player.Player;
 import gui_fields.GUI_Car;
 
 public class PlayerHandler {

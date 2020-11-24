@@ -1,10 +1,9 @@
 package Model.SquareTypes;
 
 import Model.GameSquare;
-import Model.Player;
+import Model.Player.Player;
 import gui_fields.GUI_Empty;
 import gui_fields.GUI_Field;
-import gui_fields.GUI_Street;
 
 import java.awt.*;
 
