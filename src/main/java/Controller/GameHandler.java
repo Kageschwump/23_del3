@@ -35,4 +35,7 @@ public class GameHandler {
         return gameBoard;
     }
 
+    public PlayerHandler getPlayerHandler() {
+        return playerHandler;
+    }
 }
