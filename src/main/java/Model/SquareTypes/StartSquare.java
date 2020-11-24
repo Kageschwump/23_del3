@@ -16,7 +16,7 @@ public class StartSquare extends GameSquare {
 
     public StartSquare()
     {
-        fieldType = new GUI_Start(name, "", description, Color.RED, Color.red);
+        fieldType = new GUI_Start(name, "", description, Color.white, Color.black);
     }
 
     @Override

@@ -11,8 +11,8 @@ public class VisitJailSquare extends GameSquare {
 
     private String name = "Visit jail";
     private String description = "Hope you are just visiting";
-    private Color bgColor = Color.blue;
-    private Color fgColor = Color.cyan;
+    private Color bgColor = Color.white;
+    private Color fgColor = Color.black;
     private GUI_Field fieldType;
 
     public VisitJailSquare()
