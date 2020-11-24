@@ -52,6 +52,7 @@ public class GuiHandler
                 break;
 
 
+            default: primaryColor = Color.BLACK;;
         }
 
         typeString = gui.getUserSelection("What type of car?", "Car","Tractor","Racecar","UFO");
@@ -68,9 +69,12 @@ public class GuiHandler
             case("UFO"):
                 type = GUI_Car.Type.UFO;
                 break;
+
+            default: type = GUI_Car.Type.CAR;
         }
 
-
+        GUI_Car gui_car = new GUI_Car(primaryColor,Color.BLACK,type, GUI_Car.Pattern.FILL);
+        return gui_car;
     }
 
     public void guiMenu()
