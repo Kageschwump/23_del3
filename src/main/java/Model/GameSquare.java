@@ -2,6 +2,9 @@ package Model;
 
 import Model.Player.Player;
 import gui_fields.GUI_Field;
+import gui_fields.GUI_Street;
+
+import java.awt.*;
 
 public abstract class GameSquare {
     private String name;

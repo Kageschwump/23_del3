@@ -49,6 +49,6 @@ public class Property extends GameSquare {
 
     @Override
     public GUI_Field getGuiField() {
-        return null;
+        return fieldType;
     }
 }

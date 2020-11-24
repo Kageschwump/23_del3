@@ -29,6 +29,6 @@ public class ParkingSquare extends GameSquare {
 
     @Override
     public GUI_Field getGuiField() {
-        return null;
+        return fieldType;
     }
 }

@@ -32,6 +32,6 @@ public class VisitJailSquare extends GameSquare {
 
     @Override
     public GUI_Field getGuiField() {
-        return null;
+        return fieldType;
     }
 }
