@@ -31,6 +31,6 @@ public class StartSquare extends GameSquare {
 
     @Override
     public GUI_Field getGuiField() {
-        return null;
+        return fieldType;
     }
 }

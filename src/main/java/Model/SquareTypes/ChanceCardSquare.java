@@ -36,6 +36,6 @@ public class ChanceCardSquare extends GameSquare {
 
     @Override
     public GUI_Field getGuiField() {
-        return null;
+        return fieldType;
     }
 }

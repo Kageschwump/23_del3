@@ -1,17 +1,30 @@
 package Model;
 
 import Model.SquareTypes.*;
+import gui_fields.GUI_Field;
 
 import java.awt.*;
 
 public class GameBoard {
 
-
+    private GUI_Field[] fields = new GUI_Field[24];
     private GameSquare[] squares;
+
+    public GUI_Field[] createFields()
+    {
+        for (int i = 0; i < fields.length; i++)
+        {
+
+            fields[i] = squares[i].getGuiField();
+        }
+
+        return fields;
+    }
 
     public GameBoard()
     {
         squares = new GameSquare[24];
+        createGameBoard();
     }
 
     public void createGameBoard()
