@@ -1,6 +1,8 @@
 package Model;
 
 public class GameBoard {
+
+
     private GameSquare[] squares = new GameSquare[24];
 
 
