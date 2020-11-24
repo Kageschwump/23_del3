@@ -49,4 +49,9 @@ public class GameBoard {
 
     }
 
+    public GameSquare[] getSquares()
+    {
+        return squares;
+    }
+
 }
