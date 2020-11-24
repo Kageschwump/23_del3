@@ -8,7 +8,12 @@ import java.awt.*;
 public class GameBoard {
 
     private GUI_Field[] fields = new GUI_Field[24];
-    private GameSquare[] squares;
+    private GameSquare[] squares = new GameSquare[24];
+
+    public GameBoard()
+    {
+        createGameBoard();
+    }
 
     public GUI_Field[] createFields()
     {
@@ -19,12 +24,6 @@ public class GameBoard {
         }
 
         return fields;
-    }
-
-    public GameBoard()
-    {
-        squares = new GameSquare[24];
-        createGameBoard();
     }
 
     public void createGameBoard()
