@@ -4,15 +4,15 @@ import Model.Player.Player;
 import gui_fields.GUI_Car;
 
 public class PlayerHandler {
+
     private Player[] players;
-    private GuiHandler guiHandler;
 
     public PlayerHandler()
     {
         players = new Player[4];
     }
 
-    public void createPlayer(String name, int age, GUI_Car gui_car){
+    public void createPlayer(String name, int age, GUI_Car gui_car, int startBalance){
         // Creation of id
         int playerGivenID;
 
@@ -21,16 +21,23 @@ public class PlayerHandler {
             if(players[i] == null)
             {
                 playerGivenID = i + 1;
+                players[i] = new Player(playerGivenID,name,age,gui_car,startBalance);
             }
         }
-        // Creation of car and adding
-        guiHandler.guiCreateCar();
 
-        // Player Creation
 
     }
-    public void readPlayer(Player player){
+    public Player readPlayerByName(String name){
+        Player givenPlayer = null;
 
+        for (int i = 0; i < players.length; i++)
+        {
+            if (players[i].getName().equals(name))
+            {
+                givenPlayer = players[i];
+            }
+        }
+        return givenPlayer;
     }
     public void updatePlacement(Player player){
 

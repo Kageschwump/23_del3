@@ -87,12 +87,28 @@ public class GuiHandler
     {
         String name;
         int age;
+        int startBalance;
+
+        switch (playerCount)
+        {
+            case 2:
+                startBalance = 20;
+                break;
+            case 3:
+                startBalance = 18;
+                break;
+            case 4:
+                startBalance = 16;
+            default:
+                startBalance = 20;
+        }
 
         for(int i = 0; i < playerCount; i++)
         {
             name = gui.getUserString("Name of player");
             age = gui.getUserInteger("Age of player");
-            gameHandler.getPlayerHandler().createPlayer(name,age,guiCreateCar());
+            gameHandler.getPlayerHandler().createPlayer(name,age,guiCreateCar(),startBalance);
+            guiAddPlayer(gameHandler.getPlayerHandler().readPlayerByName(name));
         }
     }
 }

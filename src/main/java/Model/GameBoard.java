@@ -26,7 +26,7 @@ public class GameBoard {
         return fields;
     }
 
-    public void createGameBoard()
+    private void createGameBoard()
     {
         squares[0] = new StartSquare();
         squares[1] = new Property("Burger Bar",1,"Welcome to BURGERZ!",Color.YELLOW, Color.lightGray);

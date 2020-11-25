@@ -4,11 +4,9 @@ import Model.Player.Player;
 
 public class Account {
     private int balance;
-    private Player player;
 
-    public Account(int balance, Player player){
+    public Account(int balance){
         this.balance = balance;
-        this.player = player;
     }
 
     public void updateScore(int balanceUpdate){
