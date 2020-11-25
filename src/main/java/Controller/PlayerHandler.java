@@ -16,7 +16,7 @@ public class PlayerHandler {
         // Creation of id
         int playerGivenID;
 
-        for(int i = 0; i <= players.length; i++)
+        for(int i = 0; i < players.length; i++)
         {
             if(players[i] == null)
             {
