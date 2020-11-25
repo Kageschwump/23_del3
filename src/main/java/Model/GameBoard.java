@@ -39,7 +39,7 @@ public class GameBoard {
         squares[8] = new Property("The Library",2,"I want to read some books", Color.magenta,Color.black);
         squares[9] = new ChanceCardSquare();
         squares[10] = new Property("The Skate Park",2,"Cool kids only",Color.ORANGE,Color.black);
-        squares[11] = new Property("The Swimming Pool",2, "Let's go swimming", Color.ORANGE,Color.black);
+        squares[11] = new Property("Swimming Pool",2, "Let's go swimming", Color.ORANGE,Color.black);
         squares[12] = new ParkingSquare();
         squares[13] = new Property("The Arcade",3,"I'm a gambling addict",Color.PINK,Color.black);
         squares[14] = new Property("The Cinema",3,"Let's watch a movie",Color.PINK,Color.black);

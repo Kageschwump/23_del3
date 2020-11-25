@@ -3,6 +3,7 @@ package Controller;
 import Model.Player.Player;
 import gui_fields.GUI_Car;
 import gui_fields.GUI_Field;
+import gui_fields.GUI_Player;
 import gui_main.GUI;
 
 import java.awt.*;
@@ -17,9 +18,9 @@ public class GuiHandler
         this.gui = new GUI(guiFields, Color.LIGHT_GRAY);
     }
 
-    public void guiAddPlayer(Player player)
+    public void guiAddPlayer(GUI_Player player)
     {
-        gui.addPlayer(player.getGuiPlayer());
+        gui.addPlayer(player);
     }
 
     public GUI_Car guiCreateCar()
@@ -99,16 +100,19 @@ public class GuiHandler
                 break;
             case 4:
                 startBalance = 16;
+                break;
             default:
                 startBalance = 20;
         }
-
+        System.out.println(startBalance);
         for(int i = 0; i < playerCount; i++)
         {
             name = gui.getUserString("Name of player");
             age = gui.getUserInteger("Age of player");
-            gameHandler.getPlayerHandler().createPlayer(name,age,guiCreateCar(),startBalance);
-            guiAddPlayer(gameHandler.getPlayerHandler().readPlayerByName(name));
+            Player player = gameHandler.getPlayerHandler().createPlayer(name,age,guiCreateCar(),startBalance);
+            GUI_Player gui_player = new GUI_Player(player.getName(),startBalance,player.getGuiPlayer().getCar());
+            guiAddPlayer(gui_player);
+            System.out.println(player.getAccount().getBalance());
         }
     }
 }

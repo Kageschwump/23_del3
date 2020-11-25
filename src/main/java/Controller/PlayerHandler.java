@@ -6,27 +6,21 @@ import gui_fields.GUI_Car;
 public class PlayerHandler {
 
     private Player[] players;
-
+    int counter = 0;
     public PlayerHandler()
     {
         players = new Player[4];
     }
 
-    public void createPlayer(String name, int age, GUI_Car gui_car, int startBalance){
+    public Player createPlayer(String name, int age, GUI_Car gui_car, int startBalance){
         // Creation of id
-        int playerGivenID;
 
-        for(int i = 0; i <= players.length; i++)
-        {
-            if(players[i] == null)
-            {
-                playerGivenID = i + 1;
-                players[i] = new Player(playerGivenID,name,age,gui_car,startBalance);
-            }
-        }
-
-
+        Player player = new Player(counter,name,age,gui_car,startBalance);
+        players[counter] = player;
+        counter++;
+        return player;
     }
+
     public Player readPlayerByName(String name){
         Player givenPlayer = null;
 
