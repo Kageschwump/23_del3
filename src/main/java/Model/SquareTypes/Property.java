@@ -27,7 +27,7 @@ public class Property extends GameSquare {
         this.bgColor = bgColor;
         this.fgColor = fgColor;
 
-        fieldType = new GUI_Street(name,"",description, priceString, bgColor,fgColor);
+        fieldType = new GUI_Street(name,priceString,description, priceString, bgColor,fgColor);
     }
 
     public void setOwner(Player player){}
