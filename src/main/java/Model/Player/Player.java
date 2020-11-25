@@ -15,12 +15,13 @@ public class Player {
     private int placement;
     private Property[] properties = new Property[16];
 
-    public Player(int id, String name, GUI_Car car, Account account){
+    public Player(int id, String name,int age, GUI_Car car, int startBalance){
         this.name = name;
         this.id = id;
+        this.age = age;
         this.player = new GUI_Player(name, 0,car);
         this.car = car;
-        this.account = account;
+        account = new Account(startBalance);
     }
 
     public String getName(){return name;}

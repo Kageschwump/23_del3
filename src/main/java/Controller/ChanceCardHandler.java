@@ -3,7 +3,7 @@ package Controller;
 import Model.ChanceCard;
 
 public class ChanceCardHandler {
-    private ChanceCard[] cards = new ChanceCard[24];
+    private ChanceCard[] cards = new ChanceCard[20];
 
     public void createChanceCards(){
 

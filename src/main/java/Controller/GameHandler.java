@@ -8,6 +8,7 @@ public class GameHandler {
     private Dice dice;
     private GameBoard gameBoard;
     private PlayerHandler playerHandler;
+    private GuiHandler guiHandler;
 
     public GameHandler()
     {
@@ -23,7 +24,8 @@ public class GameHandler {
 
     public void startGame()
     {
-
+        guiHandler = new GuiHandler(gameBoard.createFields());
+        guiHandler.guiMenu();
     }
 
     public int numberOfPlayer(){
@@ -35,4 +37,7 @@ public class GameHandler {
         return gameBoard;
     }
 
+    public PlayerHandler getPlayerHandler() {
+        return playerHandler;
+    }
 }
