@@ -73,4 +73,18 @@ public class RuleSet {
         return index;
     }
 
+    public Player determinewinner(Player[] players){
+
+        Player winner;
+
+
+        for (int i = 0; i < players.length; i++){
+            if (players[i].getAccount().getBalance() > players[i+1].getAccount().getBalance()){
+                winner = players[i];
+            }
+        }
+
+
+    }
+
 }
