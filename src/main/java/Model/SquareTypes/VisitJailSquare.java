@@ -9,15 +9,15 @@ import java.awt.*;
 
 public class VisitJailSquare extends GameSquare {
 
-    private String name = "Visit jail";
-    private String description = "Hope you are just visiting";
+    private String name = "På besøg i fængsel";
+    private String description = "Håber du bare er på besøg!";
     private Color bgColor = Color.white;
     private Color fgColor = Color.black;
     private GUI_Field fieldType;
 
     public VisitJailSquare()
     {
-        fieldType = new GUI_Jail("GUI_Field.Image.GoToJail",name,"", description,bgColor,fgColor);
+        fieldType = new GUI_Jail("default",name,"Besøg fængsel", description,bgColor,fgColor);
     }
 
     @Override

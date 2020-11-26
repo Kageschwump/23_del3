@@ -29,29 +29,29 @@ public class GameBoard {
     private void createGameBoard()
     {
         squares[0] = new StartSquare();
-        squares[1] = new Property("Burger Bar",1,"Welcome to BURGERZ!",Color.YELLOW, Color.black);
-        squares[2] = new Property("Pizza Hut",1,"Welcome to PizzaHut, DO NOT SUE US!",Color.YELLOW, Color.black);
+        squares[1] = new Property("Burger Baren",1,"Velkommen til Burger Baren",Color.YELLOW, Color.black);
+        squares[2] = new Property("Pizzahuset",1,"Velkommen til PizzaHut, sagsøg os venligst ikke!",Color.YELLOW, Color.black);
         squares[3] = new ChanceCardSquare();
-        squares[4] = new Property("The Candy Store",1,"Take me to the Candy shop",Color.lightGray, Color.black);
-        squares[5] = new Property("The Ice Cream Store", 1,"I want an ice cream",Color.lightGray, Color.black);
+        squares[4] = new Property("Slik Butikken",1,"Take me to the Candy shop",Color.lightGray, Color.black);
+        squares[5] = new Property("Is Kiosken", 1,"Jeg have en gammeldags med 3 kugler",Color.lightGray, Color.black);
         squares[6] = new VisitJailSquare();
-        squares[7] = new Property("The Museum",2, "Let's go to the Museum",Color.magenta,Color.black);
-        squares[8] = new Property("The Library",2,"I want to read some books", Color.magenta,Color.black);
+        squares[7] = new Property("Museet",2, "Lad os se noget kultur",Color.magenta,Color.black);
+        squares[8] = new Property("Bibliotek",2,"Viden er sundt, året rundt", Color.magenta,Color.black);
         squares[9] = new ChanceCardSquare();
-        squares[10] = new Property("The Skate Park",2,"Cool kids only",Color.ORANGE,Color.black);
-        squares[11] = new Property("Swimming Pool",2, "Let's go swimming", Color.ORANGE,Color.black);
+        squares[10] = new Property("Skater Parken",2,"Kun for de seje",Color.cyan,Color.black);
+        squares[11] = new Property("Svømmehallen",2, "Lad os tage en dukkert", Color.cyan,Color.black);
         squares[12] = new ParkingSquare();
-        squares[13] = new Property("The Arcade",3,"I'm a gambling addict",Color.PINK,Color.black);
-        squares[14] = new Property("The Cinema",3,"Let's watch a movie",Color.PINK,Color.black);
+        squares[13] = new Property("Spillehallen",3,"Lad os smide 3000 på rød",Color.PINK,Color.black);
+        squares[14] = new Property("Biograffen",3,"Lad os se en film",Color.PINK,Color.black);
         squares[15] = new ChanceCardSquare();
-        squares[16] = new Property("The Toy Store",3,"Kids only",Color.RED,Color.black);
-        squares[17] = new Property("The Pet Store", 3,"I want my dog",Color.RED,Color.black);
+        squares[16] = new Property("Legetøjsbutikken",3,"Kun for børn",Color.RED,Color.black);
+        squares[17] = new Property("Dyrehandlen", 3,"Jeg vil have en hund",Color.RED,Color.black);
         squares[18] = new PrisonSquare();
-        squares[19] = new Property("Big Bowl",4,"Bowling time",Color.GREEN,Color.black);
-        squares[20] = new Property("The Zoo",4,"Exotic animals",Color.GREEN,Color.black);
+        squares[19] = new Property("Bowlingshallen",4,"Det er bowling tid",Color.GREEN,Color.black);
+        squares[20] = new Property("Zoologisk Have",4,"Heste, grise, køer og får",Color.GREEN,Color.black);
         squares[21] = new ChanceCardSquare();
-        squares[22] = new Property("Water World",5,"Wuuuuuuhuuuuuu",Color.BLUE,Color.black);
-        squares[23] = new Property("The Beach",5,"Waves for days",Color.BLUE,Color.black);
+        squares[22] = new Property("Vandlandet",5,"Wuuuuuuhuuuuuu",Color.BLUE,Color.black);
+        squares[23] = new Property("Strandpromaden",5,"Waves for days",Color.BLUE,Color.black);
 
     }
 
