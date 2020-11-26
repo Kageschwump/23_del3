@@ -17,13 +17,13 @@ public class GameHandler {
     {
         this.dice = new Dice();
         this.gameBoard = new GameBoard();
-        this.ruleset = new RuleSet();
+        this.ruleset = new RuleSet(gameBoard);
     }
 
     public void round(Player player)
     {
         int facevalue = dice.roll();
-        guiHandler.playerRoll();
+        guiHandler.playerRoll(player.getName());
         guiHandler.getRoll(facevalue);
         guiHandler.resetCars(player,playerHandler.getPlayers(),gameBoard.getFields()[player.getPlacement()]);
         playerHandler.updatePlacement(facevalue, player);
@@ -45,6 +45,7 @@ public class GameHandler {
         }
 
         while (!ruleset.gameOver(playerHandler.getPlayers())) {
+
             round(playerHandler.getPlayers()[starter]);
             starter++;
             if(starter >= playerHandler.getPlayers().length)
@@ -76,7 +77,5 @@ public class GameHandler {
             playerHandler.getPlayers()[i] = playerHandler.createPlayer(i,guiHandler.playerString("Navn"),guiHandler.playerInt("Alder"),guiHandler.guiCreateCar(),startBalance);
             guiHandler.guiAddPlayer(playerHandler.getPlayers()[i].getGuiPlayer());
         }
-
-
     }
 }

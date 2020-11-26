@@ -2,7 +2,16 @@ package Model;
 
 import Model.Player.Player;
 
+import java.awt.*;
+
 public class RuleSet {
+
+    GameBoard gameBoard;
+
+    public RuleSet(GameBoard gameBoard)
+    {
+        this.gameBoard = gameBoard;
+    }
 
     public boolean checkForPropertyPair(Player player)
     {
@@ -19,6 +28,21 @@ public class RuleSet {
             }
         }
         return flag;
+    }
+
+    public int[] moveToColor(Color color)
+    {
+        int[] placements = new int[4];
+        int placementsIndex = 0;
+        for (int i = 0; i < gameBoard.getSquares().length; i++)
+        {
+            if(color == gameBoard.getSquares()[i].getColor())
+            {
+                placements[placementsIndex] = i;
+                placementsIndex++;
+            }
+        }
+        return placements;
     }
 
     public boolean gameOver(Player[] players)

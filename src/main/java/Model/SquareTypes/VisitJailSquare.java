@@ -39,4 +39,9 @@ public class VisitJailSquare extends GameSquare {
     public String getDesc() {
         return description;
     }
+
+    @Override
+    public Color getColor() {
+        return bgColor;
+    }
 }

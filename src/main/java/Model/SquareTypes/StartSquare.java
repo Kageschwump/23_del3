@@ -38,4 +38,9 @@ public class StartSquare extends GameSquare {
     public String getDesc() {
         return description;
     }
+
+    @Override
+    public Color getColor() {
+        return Color.white;
+    }
 }

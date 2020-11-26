@@ -109,8 +109,8 @@ public class GuiHandler
 
     }
 
-    public void playerRoll(){
-    gui.getUserButtonPressed("Tid til at rulle!", "Rul");
+    public void playerRoll(String playername){
+    gui.getUserButtonPressed("Din tur " + playername + "!", "Rul");
     }
 
     public void printMessage(String message){

@@ -32,6 +32,7 @@ public class Property extends GameSquare {
 
     public void setOwner(Player player){}
 
+    @Override
     public Color getColor()
     {
         return bgColor;
@@ -79,4 +80,5 @@ public class Property extends GameSquare {
     public String getDesc() {
         return description;
     }
+
 }

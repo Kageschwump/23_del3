@@ -16,5 +16,7 @@ public abstract class GameSquare {
 
     public abstract String getDesc();
 
+    public abstract Color getColor();
+
 }
 

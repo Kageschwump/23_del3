@@ -40,4 +40,9 @@ public class PrisonSquare extends GameSquare {
     public String getDesc() {
         return description;
     }
+
+    @Override
+    public Color getColor() {
+        return bgColor;
+    }
 }
