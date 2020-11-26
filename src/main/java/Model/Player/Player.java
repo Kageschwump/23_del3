@@ -61,10 +61,12 @@ public class Player {
 
         if(placement+newPlacement >= 24){
             rest = placement + newPlacement - 24;
-            placement = rest;
+
+            setPlacement(rest);
             account.updateScore(2);
             player.setBalance(account.getBalance());
         }
+        else
         placement += newPlacement;
     }
 

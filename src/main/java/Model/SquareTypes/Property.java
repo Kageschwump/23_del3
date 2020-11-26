@@ -13,7 +13,7 @@ public class Property extends GameSquare {
     private String name;
     private int price;
     private String description;
-    private Player owner;
+    private Player owner = null;
     private Color bgColor;
     private Color fgColor;
     private GUI_Ownable fieldType;
@@ -39,16 +39,30 @@ public class Property extends GameSquare {
 
     @Override
     public void function(Player player) {
-        if(owned == true)
+        if(propertyNotOwned())
         {
+            owner = player;
+            player.getAccount().updateScore(-price);
+            player.getGuiPlayer().setBalance(player.getAccount().getBalance());
+            fieldType.setOwnerName(player.getName());
         }
+        else if(player != owner){
+             player.getAccount().updateScore(-price);
+             player.getGuiPlayer().setBalance(player.getAccount().getBalance());
+             owner.getAccount().updateScore(price);
+             owner.getGuiPlayer().setBalance(owner.getAccount().getBalance());
+        }
+
 
     }
 
-    public boolean propertyNotOwned(Player player)
+    public boolean propertyNotOwned()
     {
-
-        return true;
+        if(owner == null){
+            return true;
+        }
+        else
+            return false;
     }
 
     @Override
