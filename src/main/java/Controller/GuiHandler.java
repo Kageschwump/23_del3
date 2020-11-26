@@ -92,9 +92,6 @@ public class GuiHandler
 
         switch (playerCount)
         {
-            case 2:
-                startBalance = 20;
-                break;
             case 3:
                 startBalance = 18;
                 break;
