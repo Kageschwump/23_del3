@@ -1,5 +1,6 @@
 package Controller;
 
+import Model.ChanceCard;
 import Model.Dice;
 import Model.GameBoard;
 import Model.Player.Player;
@@ -11,6 +12,7 @@ public class GameHandler {
     private GameBoard gameBoard;
     private PlayerHandler playerHandler;
     private GuiHandler guiHandler;
+    private ChanceCard chanceCard;
     private RuleSet ruleset;
 
     public GameHandler()

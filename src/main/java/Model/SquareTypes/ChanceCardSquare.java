@@ -3,6 +3,7 @@ package Model.SquareTypes;
 import Model.ChanceCard;
 import Model.GameSquare;
 import Model.Player.Player;
+import Model.RuleSet;
 import gui_fields.GUI_Chance;
 import gui_fields.GUI_Field;
 
@@ -27,7 +28,9 @@ public class ChanceCardSquare extends GameSquare {
     @Override
     public void function(Player player)
     {
+        int random = (int)(Math.random() * 20) -1;
 
+        chanceCards[random].cardFunction(player);
     }
 
     public void createChanceCards()
@@ -35,10 +38,6 @@ public class ChanceCardSquare extends GameSquare {
 
     }
 
-    public void shuffle()
-    {
-
-    }
 
     @Override
     public String getName() {

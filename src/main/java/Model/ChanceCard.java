@@ -2,7 +2,6 @@ package Model;
 
 import Model.Player.Player;
 
-import javax.print.DocFlavor;
 import java.awt.*;
 
 public abstract class ChanceCard {
