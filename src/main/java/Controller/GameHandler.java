@@ -17,19 +17,28 @@ public class GameHandler {
     {
         this.dice = new Dice();
         this.gameBoard = new GameBoard();
-
+        this.ruleset = new RuleSet();
     }
 
     public void round(Player player)
     {
         int facevalue = dice.roll();
-
+        guiHandler.playerRoll();
+        guiHandler.getRoll(facevalue);
+        playerHandler.updatePlacement(facevalue, player);
+        //gameBoard.getFields(player,get)
     }
 
     public void startGame()
     {
         guiHandler = new GuiHandler(gameBoard.createFields());
         playersSetup(guiHandler.playerCount());
+        int starter = ruleset.determineStarter(playerHandler.getPlayers());
+        guiHandler.printMessage(playerHandler.getPlayers()[starter].getName() + " starts");
+        for(int i = 0; i < playerHandler.getPlayers().length; i++) {
+            gameBoard.getFields()[0].setCar(playerHandler.getPlayers()[i].getGuiPlayer(),true);
+        }
+            round(playerHandler.getPlayers()[starter]);
     }
 
     private void playersSetup(int playerCount)

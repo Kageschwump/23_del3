@@ -92,4 +92,15 @@ public class GuiHandler
         return gui.getUserInteger(msg);
     }
 
+    public void playerRoll(){
+    gui.getUserButtonPressed("Time to roll!", "Roll");
+    }
+
+    public void printMessage(String message){
+        gui.showMessage(message);
+    }
+
+    public void getRoll(int faceValue){
+        gui.setDie(faceValue);
+    }
 }

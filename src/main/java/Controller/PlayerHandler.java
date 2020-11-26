@@ -29,9 +29,11 @@ public class PlayerHandler {
         }
         return givenPlayer;
     }
-    public void updatePlacement(Player player){
 
+    public void updatePlacement(int newPlacement, Player player){
+       player.setPlacement(newPlacement);
     }
+
     public void updateScore(Player player){
 
     }

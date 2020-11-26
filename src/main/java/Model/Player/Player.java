@@ -30,10 +30,6 @@ public class Player {
 
     public GUI_Player getGuiPlayer(){return player;}
 
-    public void updatePlacement(int newPlacement){
-
-    }
-
     public Property[] getProperties() {
         return properties;
     }
@@ -59,6 +55,18 @@ public class Player {
     public int getPlacement() {
         return placement;
     }
+
+    public void setPlacement(int newPlacement) {
+        int rest;
+
+        if(placement+newPlacement >= 24){
+            rest = placement + newPlacement - 24;
+            placement = rest;
+        }
+        placement += newPlacement;
+    }
+
+
 
     public GUI_Player getPlayer() {
         return player;
