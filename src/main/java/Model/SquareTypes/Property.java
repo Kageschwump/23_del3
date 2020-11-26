@@ -39,12 +39,16 @@ public class Property extends GameSquare {
 
     @Override
     public void function(Player player) {
+        if(owned == true)
+        {
+        }
 
     }
 
     public boolean propertyNotOwned(Player player)
     {
 
+        return true;
     }
 
     @Override
