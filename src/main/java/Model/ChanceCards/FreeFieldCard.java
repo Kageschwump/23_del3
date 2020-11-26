@@ -16,6 +16,6 @@ public class FreeFieldCard extends ChanceCard {
     @Override
     public String getDesc()
     {
-
+        return desc;
     }
 }

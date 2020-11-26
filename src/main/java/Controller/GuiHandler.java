@@ -120,4 +120,9 @@ public class GuiHandler
     public void getRoll(int faceValue){
         gui.setDie(faceValue);
     }
+
+    public GUI getGui()
+    {
+        return gui;
+    }
 }

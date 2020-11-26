@@ -1,5 +1,6 @@
 package Model.Player;
 
+import Model.ChanceCard;
 import Model.SquareTypes.Property;
 import gui_fields.GUI_Car;
 import gui_fields.GUI_Player;
@@ -13,7 +14,7 @@ public class Player {
     private GUI_Player player;
     private Account account;
     private int placement;
-    private Property[] properties = new Property[16];
+    private boolean jailFreeCard;
 
     public Player(int id, String name,int age, GUI_Car car, int startBalance){
         this.name = name;
@@ -29,20 +30,6 @@ public class Player {
     public int getId(){return id;}
 
     public GUI_Player getGuiPlayer(){return player;}
-
-    public Property[] getProperties() {
-        return properties;
-    }
-
-    public void setProperty(Property property) {
-        for (int i=0;i <= properties.length; i++)
-        {
-            if(properties[i]==null)
-            {
-                properties[i] = property;
-            }
-        }
-    }
 
     public int getAge() {
         return age;
@@ -77,5 +64,9 @@ public class Player {
 
     public GUI_Player getPlayer() {
         return player;
+    }
+
+    public void setJailFreeCard(boolean jailFreeCard) {
+        this.jailFreeCard = jailFreeCard;
     }
 }

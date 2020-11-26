@@ -13,26 +13,10 @@ public class RuleSet {
         this.gameBoard = gameBoard;
     }
 
-    public boolean checkForPropertyPair(Player player)
+    public int[] squaresOfSameColor(Color color)
     {
-        boolean flag = false;
+        int[] placements = new int[2];
 
-        for(int i = 0; i <= player.getProperties().length; i++)
-        {
-            for (int q = i + 1; q <= player.getProperties().length; q++)
-            {
-                if(player.getProperties()[i].getColor() == player.getProperties()[q].getColor())
-                {
-                    flag = true;
-                }
-            }
-        }
-        return flag;
-    }
-
-    public int[] moveToColor(Color color)
-    {
-        int[] placements = new int[4];
         int placementsIndex = 0;
         for (int i = 0; i < gameBoard.getSquares().length; i++)
         {

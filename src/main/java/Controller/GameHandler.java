@@ -12,7 +12,7 @@ public class GameHandler {
     private GameBoard gameBoard;
     private PlayerHandler playerHandler;
     private GuiHandler guiHandler;
-    private ChanceCard chanceCard;
+    private ChanceCardHandler chanceCardHandler;
     private RuleSet ruleset;
 
     public GameHandler()
@@ -38,6 +38,8 @@ public class GameHandler {
     public void startGame()
     {
         guiHandler = new GuiHandler(gameBoard.createFields());
+        chanceCardHandler = new ChanceCardHandler(gameBoard, ruleset,guiHandler);
+        gameBoard.setChanceCardHandler(chanceCardHandler);
         playersSetup(guiHandler.playerCount());
         int starter = ruleset.determineStarter(playerHandler.getPlayers());
         guiHandler.printMessage(playerHandler.getPlayers()[starter].getName() + " starter");

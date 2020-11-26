@@ -1,9 +1,9 @@
 package Model.SquareTypes;
 
+import Controller.ChanceCardHandler;
 import Model.ChanceCard;
 import Model.GameSquare;
 import Model.Player.Player;
-import Model.RuleSet;
 import gui_fields.GUI_Chance;
 import gui_fields.GUI_Field;
 
@@ -17,20 +17,18 @@ public class ChanceCardSquare extends GameSquare {
     private Color bgColor = Color.orange;
     private Color fgColor = Color.black;
     private GUI_Field fieldType;
-    private ChanceCard[] chanceCards;
+    ChanceCardHandler chanceCardHandler;
 
-    public ChanceCardSquare()
+    public ChanceCardSquare(ChanceCardHandler chanceCardHandler)
     {
         fieldType = new GUI_Chance(name,subText,description,bgColor,fgColor);
-        chanceCards = new ChanceCard[20];
+        this.chanceCardHandler = chanceCardHandler;
     }
 
     @Override
     public void function(Player player)
     {
-        int random = (int)(Math.random() * 20) -1;
-
-        chanceCards[random].cardFunction(player);
+        chanceCardHandler.drawCard(player);
     }
 
     public void createChanceCards()
