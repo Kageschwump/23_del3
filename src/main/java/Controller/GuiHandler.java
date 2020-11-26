@@ -29,25 +29,25 @@ public class GuiHandler
         String typeString;
         GUI_Car.Type type;
 
-        primaryColorString = gui.getUserSelection("What color car?", "Black","Blue","Red","Gray","Green","Yellow");
+        primaryColorString = gui.getUserSelection("Hvilken farve?", "Sort","Blå","Rød","Grå","Grøn","Gul");
         switch (primaryColorString)
         {
-            case ("Black"):
+            case ("Sort"):
                 primaryColor = Color.BLACK;
                 break;
-            case("Blue"):
+            case("Blå"):
                 primaryColor = Color.BLUE;
                 break;
-            case("Red"):
+            case("Rød"):
                 primaryColor = Color.RED;
                 break;
-            case("Gray"):
+            case("Grå"):
                 primaryColor = Color.GRAY;
                 break;
-            case("Green"):
+            case("Grøn"):
                 primaryColor = Color.GREEN;
                 break;
-            case("Yellow"):
+            case("Gul"):
                 primaryColor = Color.YELLOW;
                 break;
 
@@ -55,15 +55,15 @@ public class GuiHandler
             default: primaryColor = Color.BLACK;;
         }
 
-        typeString = gui.getUserSelection("What type of car?", "Car","Tractor","Racecar","UFO");
+        typeString = gui.getUserSelection("Hvilken type bil?", "Bil","Traktor","Racerbil","UFO");
         switch(typeString){
-            case("Car"):
+            case("Bil"):
                 type = GUI_Car.Type.CAR;
                 break;
-            case("Tractor"):
+            case("Traktor"):
                 type = GUI_Car.Type.TRACTOR;
                 break;
-            case("Racecar"):
+            case("Racerbil"):
                 type = GUI_Car.Type.RACECAR;
                 break;
             case("UFO"):
@@ -79,7 +79,7 @@ public class GuiHandler
 
     public int playerCount()
     {
-        return gui.getUserInteger("How many players?",2,4);
+        return gui.getUserInteger("Hvor mange spillere?",2,4);
     }
 
     public String playerString(String msg)
@@ -110,7 +110,7 @@ public class GuiHandler
     }
 
     public void playerRoll(){
-    gui.getUserButtonPressed("Time to roll!", "Roll");
+    gui.getUserButtonPressed("Tid til at rulle!", "Rul");
     }
 
     public void printMessage(String message){

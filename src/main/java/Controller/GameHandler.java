@@ -38,7 +38,7 @@ public class GameHandler {
         guiHandler = new GuiHandler(gameBoard.createFields());
         playersSetup(guiHandler.playerCount());
         int starter = ruleset.determineStarter(playerHandler.getPlayers());
-        guiHandler.printMessage(playerHandler.getPlayers()[starter].getName() + " starts");
+        guiHandler.printMessage(playerHandler.getPlayers()[starter].getName() + " starter");
 
         for(int i = 0; i < playerHandler.getPlayers().length; i++) {
             gameBoard.getFields()[0].setCar(playerHandler.getPlayers()[i].getGuiPlayer(),true);
@@ -73,7 +73,7 @@ public class GameHandler {
 
         for(int i = 0; i < playerCount; i++)
         {
-            playerHandler.getPlayers()[i] = playerHandler.createPlayer(i,guiHandler.playerString("Name"),guiHandler.playerInt("Age"),guiHandler.guiCreateCar(),startBalance);
+            playerHandler.getPlayers()[i] = playerHandler.createPlayer(i,guiHandler.playerString("Navn"),guiHandler.playerInt("Alder"),guiHandler.guiCreateCar(),startBalance);
             guiHandler.guiAddPlayer(playerHandler.getPlayers()[i].getGuiPlayer());
         }
 
