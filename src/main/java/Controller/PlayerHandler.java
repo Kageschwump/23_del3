@@ -2,23 +2,19 @@ package Controller;
 
 import Model.Player.Player;
 import gui_fields.GUI_Car;
+import gui_fields.GUI_Player;
 
 public class PlayerHandler {
 
     private Player[] players;
-    int counter = 0;
-    public PlayerHandler()
+
+    public PlayerHandler(int amountOfPlayers)
     {
-        players = new Player[4];
+        players = new Player[amountOfPlayers];
     }
 
-    public Player createPlayer(String name, int age, GUI_Car gui_car, int startBalance){
-        // Creation of id
-
-        Player player = new Player(counter,name,age,gui_car,startBalance);
-        players[counter] = player;
-        counter++;
-        return player;
+    public Player createPlayer(int id,String name, int age, GUI_Car gui_car, int startBalance){
+        return new Player(id,name,age,gui_car,startBalance);
     }
 
     public Player readPlayerByName(String name){
@@ -42,6 +38,7 @@ public class PlayerHandler {
     public void readProperties(Player player){
 
     }
+
 
     public Player[] getPlayers() {
         return players;

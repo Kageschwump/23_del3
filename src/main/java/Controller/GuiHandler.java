@@ -11,7 +11,6 @@ import java.awt.*;
 public class GuiHandler
 {
     private GUI gui;
-    private GameHandler gameHandler = new GameHandler();
 
     public GuiHandler(GUI_Field[] guiFields)
     {
@@ -78,40 +77,19 @@ public class GuiHandler
         return gui_car;
     }
 
-    public void guiMenu()
+    public int playerCount()
     {
-        int playerAmount = gui.getUserInteger("How many players?",2,4);
-        playerCreation(playerAmount);
+        return gui.getUserInteger("How many players?",2,4);
     }
 
-    public void playerCreation(int playerCount)
+    public String playerString(String msg)
     {
-        String name;
-        int age;
-        int startBalance;
-
-        switch (playerCount)
-        {
-            case 3:
-                startBalance = 18;
-                break;
-            case 4:
-                startBalance = 16;
-                break;
-            default:
-                startBalance = 20;
-        }
-        for(int i = 0; i < playerCount; i++)
-        {
-            name = gui.getUserString("Name of player");
-            age = gui.getUserInteger("Age of player");
-            Player player = gameHandler.getPlayerHandler().createPlayer(name,age,guiCreateCar(),startBalance);
-            GUI_Player gui_player = new GUI_Player(player.getName(),startBalance,player.getGuiPlayer().getCar());
-            guiAddPlayer(gui_player);
-        }
+        return gui.getUserString(msg);
     }
 
-    public GUI getGui() {
-        return gui;
+    public int playerInt(String msg)
+    {
+        return gui.getUserInteger(msg);
     }
+
 }

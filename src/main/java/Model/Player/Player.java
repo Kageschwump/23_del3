@@ -19,7 +19,7 @@ public class Player {
         this.name = name;
         this.id = id;
         this.age = age;
-        this.player = new GUI_Player(name, 0,car);
+        this.player = new GUI_Player(name, startBalance,car);
         this.car = car;
         account = new Account(startBalance);
     }

@@ -17,47 +17,44 @@ public class GameHandler {
     {
         this.dice = new Dice();
         this.gameBoard = new GameBoard();
-        this.playerHandler = new PlayerHandler();
+
     }
 
     public void round(Player player)
     {
         int facevalue = dice.roll();
 
-        guiHandler.getGui().getUserButtonPressed(null,"Roll");
-
     }
 
     public void startGame()
     {
-        int starterIndex;
         guiHandler = new GuiHandler(gameBoard.createFields());
-        guiHandler.guiMenu();
-        starterIndex = ruleset.determineStarter(playerHandler.getPlayers());
-        for(int i = 0; i < playerHandler.getPlayers().length; i++) {
-            gameBoard.getFields()[0].setCar(playerHandler.getPlayers()[i].getGuiPlayer(), true);
+        playersSetup(guiHandler.playerCount());
+    }
+
+    private void playersSetup(int playerCount)
+    {
+        playerHandler = new PlayerHandler(playerCount);
+        int startBalance;
+
+        switch (playerCount)
+        {
+            case 3:
+                startBalance = 18;
+                break;
+            case 4:
+                startBalance = 16;
+                break;
+            default:
+                startBalance = 20;
         }
 
-        while(!ruleset.gameOver()){
-            round(playerHandler.getPlayers()[starterIndex]);
-            starterIndex++;
-
-            if(starterIndex >= playerHandler.getPlayers().length){
-                starterIndex = 0;
-            }
+        for(int i = 0; i < playerCount; i++)
+        {
+            playerHandler.getPlayers()[i] = playerHandler.createPlayer(i,guiHandler.playerString("Name"),guiHandler.playerInt("Age"),guiHandler.guiCreateCar(),startBalance);
+            guiHandler.guiAddPlayer(playerHandler.getPlayers()[i].getGuiPlayer());
         }
-    }
 
-    public int numberOfPlayer(){
 
-        return 0;
-    }
-
-    public GameBoard getGameBoard() {
-        return gameBoard;
-    }
-
-    public PlayerHandler getPlayerHandler() {
-        return playerHandler;
     }
 }
