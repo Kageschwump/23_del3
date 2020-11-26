@@ -21,7 +21,9 @@ public class PrisonSquare extends GameSquare {
     }
 
     @Override
-    public void function(Player player) {
+    public void function(Player player)
+    {
+        player.setPlacement(6);
     }
 
     @Override
@@ -32,5 +34,10 @@ public class PrisonSquare extends GameSquare {
     @Override
     public GUI_Field getGuiField() {
         return fieldType;
+    }
+
+    @Override
+    public String getDesc() {
+        return description;
     }
 }

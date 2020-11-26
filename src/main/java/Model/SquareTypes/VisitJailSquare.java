@@ -34,4 +34,9 @@ public class VisitJailSquare extends GameSquare {
     public GUI_Field getGuiField() {
         return fieldType;
     }
+
+    @Override
+    public String getDesc() {
+        return description;
+    }
 }

@@ -2,6 +2,7 @@ package Model.SquareTypes;
 
 import Model.GameSquare;
 import Model.Player.Player;
+import Model.RuleSet;
 import gui_fields.GUI_Field;
 import gui_fields.GUI_Start;
 
@@ -12,7 +13,6 @@ public class StartSquare extends GameSquare {
     private String name = "Start";
     private String description = "You're on the start";
     private GUI_Field fieldType;
-    private int passStart = 2;
 
     public StartSquare()
     {
@@ -32,5 +32,10 @@ public class StartSquare extends GameSquare {
     @Override
     public GUI_Field getGuiField() {
         return fieldType;
+    }
+
+    @Override
+    public String getDesc() {
+        return description;
     }
 }

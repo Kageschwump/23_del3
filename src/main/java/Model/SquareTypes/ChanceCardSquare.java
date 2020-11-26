@@ -26,6 +26,7 @@ public class ChanceCardSquare extends GameSquare {
 
     @Override
     public void function(Player player) {
+
         chanceCardHandler.drawChanceCard();
     }
 
@@ -37,5 +38,10 @@ public class ChanceCardSquare extends GameSquare {
     @Override
     public GUI_Field getGuiField() {
         return fieldType;
+    }
+
+    @Override
+    public String getDesc() {
+        return description;
     }
 }

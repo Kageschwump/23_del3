@@ -92,6 +92,23 @@ public class GuiHandler
         return gui.getUserInteger(msg);
     }
 
+    public void resetCars(Player player, Player[] players,GUI_Field gui_field)
+    {
+        gui_field.removeAllCars();
+
+        for (int i = 0; i < players.length; i++)
+        {
+            if (!player.getName().equals(players[i].getName()))
+            {
+                if(player.getPlacement() == players[i].getPlacement())
+                {
+                    gui_field.setCar(players[i].getGuiPlayer(),true);
+                }
+            }
+        }
+
+    }
+
     public void playerRoll(){
     gui.getUserButtonPressed("Time to roll!", "Roll");
     }

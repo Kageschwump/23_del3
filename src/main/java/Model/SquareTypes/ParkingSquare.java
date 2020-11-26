@@ -23,7 +23,7 @@ public class ParkingSquare extends GameSquare {
 
     @Override
     public void function(Player player) {
-        
+
     }
 
     @Override
@@ -34,5 +34,10 @@ public class ParkingSquare extends GameSquare {
     @Override
     public GUI_Field getGuiField() {
         return fieldType;
+    }
+
+    @Override
+    public String getDesc() {
+        return description;
     }
 }

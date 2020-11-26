@@ -10,12 +10,7 @@ public class Account {
     }
 
     public void updateScore(int balanceUpdate){
-        if(balance+balanceUpdate < 0)
-        {
-           balance = 0;
-        } else {
-            balance += balanceUpdate;
-        }
+        balance += balanceUpdate;
     }
 
     public int getBalance(){return balance;}

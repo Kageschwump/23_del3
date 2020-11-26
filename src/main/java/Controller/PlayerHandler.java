@@ -2,7 +2,6 @@ package Controller;
 
 import Model.Player.Player;
 import gui_fields.GUI_Car;
-import gui_fields.GUI_Player;
 
 public class PlayerHandler {
 
@@ -31,7 +30,7 @@ public class PlayerHandler {
     }
 
     public void updatePlacement(int newPlacement, Player player){
-       player.setPlacement(newPlacement);
+       player.updatePlacement(newPlacement);
     }
 
     public void updateScore(Player player){

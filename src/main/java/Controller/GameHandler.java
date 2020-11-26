@@ -25,8 +25,12 @@ public class GameHandler {
         int facevalue = dice.roll();
         guiHandler.playerRoll();
         guiHandler.getRoll(facevalue);
+        guiHandler.resetCars(player,playerHandler.getPlayers(),gameBoard.getFields()[player.getPlacement()]);
         playerHandler.updatePlacement(facevalue, player);
-        //gameBoard.getFields(player,get)
+        gameBoard.getSquares()[player.getPlacement()].function(player);
+        gameBoard.getFields()[player.getPlacement()].setCar(player.getGuiPlayer(),true);
+        guiHandler.printMessage(gameBoard.getSquares()[player.getPlacement()].getDesc());
+
     }
 
     public void startGame()
@@ -35,10 +39,19 @@ public class GameHandler {
         playersSetup(guiHandler.playerCount());
         int starter = ruleset.determineStarter(playerHandler.getPlayers());
         guiHandler.printMessage(playerHandler.getPlayers()[starter].getName() + " starts");
+
         for(int i = 0; i < playerHandler.getPlayers().length; i++) {
             gameBoard.getFields()[0].setCar(playerHandler.getPlayers()[i].getGuiPlayer(),true);
         }
+
+        while (!ruleset.gameOver(playerHandler.getPlayers())) {
             round(playerHandler.getPlayers()[starter]);
+            starter++;
+            if(starter >= playerHandler.getPlayers().length)
+            {
+                starter = 0;
+            }
+        }
     }
 
     private void playersSetup(int playerCount)

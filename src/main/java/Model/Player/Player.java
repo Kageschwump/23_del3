@@ -56,17 +56,22 @@ public class Player {
         return placement;
     }
 
-    public void setPlacement(int newPlacement) {
+    public void updatePlacement(int newPlacement) {
         int rest;
 
         if(placement+newPlacement >= 24){
             rest = placement + newPlacement - 24;
             placement = rest;
+            account.updateScore(2);
+            player.setBalance(account.getBalance());
         }
         placement += newPlacement;
     }
 
-
+    public void setPlacement(int placement)
+    {
+        this.placement = placement;
+    }
 
     public GUI_Player getPlayer() {
         return player;

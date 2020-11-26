@@ -42,6 +42,11 @@ public class Property extends GameSquare {
 
     }
 
+    public boolean propertyNotOwned(Player player)
+    {
+
+    }
+
     @Override
     public String getName() {
         return name;
@@ -50,5 +55,10 @@ public class Property extends GameSquare {
     @Override
     public GUI_Field getGuiField() {
         return fieldType;
+    }
+
+    @Override
+    public String getDesc() {
+        return description;
     }
 }
