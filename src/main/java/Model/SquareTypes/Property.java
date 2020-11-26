@@ -39,7 +39,8 @@ public class Property extends GameSquare {
 
     @Override
     public void function(Player player) {
-
+        owned = true;
+        owner = player;
     }
 
     @Override

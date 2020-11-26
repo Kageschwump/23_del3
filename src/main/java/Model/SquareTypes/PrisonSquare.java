@@ -22,6 +22,7 @@ public class PrisonSquare extends GameSquare {
 
     @Override
     public void function(Player player) {
+        player.getAccount().updateScore(-1);
     }
 
     @Override
