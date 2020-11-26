@@ -12,10 +12,10 @@ public class ChanceCardSquare extends GameSquare {
 
     private ChanceCardHandler chanceCardHandler = new ChanceCardHandler();
 
-    private String name = "C";
-    private String subText = "Grab a card";
-    private String description = "Grab a card and you might get lucky";
-    private Color bgColor = Color.white;
+    private String name = "?";
+    private String subText = "Chancen";
+    private String description = "Prøv lykken, tag et kort";
+    private Color bgColor = Color.orange;
     private Color fgColor = Color.black;
     private GUI_Field fieldType;
 

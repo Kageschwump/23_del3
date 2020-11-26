@@ -10,15 +10,15 @@ import java.awt.*;
 
 public class ParkingSquare extends GameSquare {
 
-    private String name = "Parking";
-    private String description = "Peter park here";
+    private String name = "Gratis Parkering";
+    private String description = "Parker her og tag en pause";
     private Color bgColor = Color.WHITE;
     private Color fgColor = Color.black;
     private GUI_Field fieldType;
 
     public ParkingSquare()
     {
-        fieldType = new GUI_Refuge(null,name,"",description,bgColor,fgColor);
+        fieldType = new GUI_Refuge("default",name,"Parkering",description,bgColor,fgColor);
     }
 
     @Override

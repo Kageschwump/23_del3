@@ -11,7 +11,7 @@ import java.awt.*;
 public class StartSquare extends GameSquare {
 
     private String name = "Start";
-    private String description = "You're on the start";
+    private String description = "Klar, parat, start";
     private GUI_Field fieldType;
 
     public StartSquare()
