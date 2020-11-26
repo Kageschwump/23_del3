@@ -101,7 +101,6 @@ public class GuiHandler
             default:
                 startBalance = 20;
         }
-        System.out.println(startBalance);
         for(int i = 0; i < playerCount; i++)
         {
             name = gui.getUserString("Name of player");
@@ -109,7 +108,10 @@ public class GuiHandler
             Player player = gameHandler.getPlayerHandler().createPlayer(name,age,guiCreateCar(),startBalance);
             GUI_Player gui_player = new GUI_Player(player.getName(),startBalance,player.getGuiPlayer().getCar());
             guiAddPlayer(gui_player);
-            System.out.println(player.getAccount().getBalance());
         }
+    }
+
+    public GUI getGui() {
+        return gui;
     }
 }

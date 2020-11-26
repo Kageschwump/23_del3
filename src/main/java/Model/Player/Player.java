@@ -55,4 +55,12 @@ public class Player {
     public Account getAccount() {
         return account;
     }
+
+    public int getPlacement() {
+        return placement;
+    }
+
+    public GUI_Player getPlayer() {
+        return player;
+    }
 }

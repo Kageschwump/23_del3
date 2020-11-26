@@ -28,10 +28,6 @@ public class RuleSet {
 
     public int determineStarter(Player[] players)
     {
-
-        if (players.length == 0)
-            return -1;
-
         int index = 0;
         int min = players[index].getAge();
 

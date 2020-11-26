@@ -60,9 +60,11 @@ public class GameBoard {
 
     }
 
-    public GameSquare[] getSquares()
-    {
+    public GameSquare[] getSquares() {
         return squares;
     }
 
+    public GUI_Field[] getFields() {
+        return fields;
+    }
 }

@@ -42,4 +42,8 @@ public class PlayerHandler {
     public void readProperties(Player player){
 
     }
+
+    public Player[] getPlayers() {
+        return players;
+    }
 }
