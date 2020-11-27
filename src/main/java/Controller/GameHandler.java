@@ -61,7 +61,7 @@ public class GameHandler {
                 starter = 0;
             }
         }
-        guiHandler.printMessage(ruleset.determineWinner(playerHandler.getPlayers()) + " vandt!!!");
+        guiHandler.printMessage(ruleset.determineWinner(playerHandler.getPlayers()).getName() + " vandt!!!");
     }
 
     private void playersSetup(int playerCount)
