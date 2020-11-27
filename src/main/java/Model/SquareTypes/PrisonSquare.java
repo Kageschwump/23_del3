@@ -23,7 +23,11 @@ public class PrisonSquare extends GameSquare {
     @Override
     public void function(Player player)
     {
-        player.setPlacement(6);
+        if(!player.isJailFreeCard())
+        {
+            player.setPlacement(6);
+            player.getAccount().updateScore(-1);
+        }
     }
 
     @Override

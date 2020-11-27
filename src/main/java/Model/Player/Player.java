@@ -69,4 +69,9 @@ public class Player {
     public void setJailFreeCard(boolean jailFreeCard) {
         this.jailFreeCard = jailFreeCard;
     }
+
+    public boolean isJailFreeCard() {
+        return jailFreeCard;
+    }
+
 }
