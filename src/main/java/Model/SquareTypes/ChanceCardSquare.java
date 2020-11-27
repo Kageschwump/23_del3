@@ -12,7 +12,7 @@ public class ChanceCardSquare extends GameSquare {
 
     private String name = "?";
     private String subText = "Chancen";
-    private String description = "Prøv lykken, tag et kort";
+    private String description;
     private Color bgColor = Color.orange;
     private Color fgColor = Color.black;
     private GUI_Field fieldType;
