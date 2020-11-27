@@ -46,6 +46,7 @@ public class Property extends GameSquare {
             player.getAccount().updateScore(-price);
             player.getGuiPlayer().setBalance(player.getAccount().getBalance());
             fieldType.setOwnerName(player.getName());
+            fieldType.setOwnableLabel(player.getName());
         }
         else if(player != owner){
              player.getAccount().updateScore(-price);
