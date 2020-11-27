@@ -46,12 +46,13 @@ public class MoveToColor extends ChanceCard {
 
     }
 
-    public void changePlayerPlacement(Player player)
+    public void changePlayerPlacement(Player player, int[] placements)
     {
         String wishedPlacement;
+
         for(int i = 0; i < gameBoard.getSquares().length; i++)
         {
-            if()
+            if(true)
             {
                 player.setPlacement(i);
             }
