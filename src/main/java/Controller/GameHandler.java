@@ -30,9 +30,18 @@ public class GameHandler {
         guiHandler.getRoll(facevalue);
         guiHandler.resetCars(player,playerHandler.getPlayers(),gameBoard.getFields()[player.getPlacement()]);
         playerHandler.updatePlacement(facevalue, player);
-        gameBoard.getSquares()[player.getPlacement()].function(player);
-        gameBoard.getFields()[player.getPlacement()].setCar(player.getGuiPlayer(),true);
-        guiHandler.printMessage(gameBoard.getSquares()[player.getPlacement()].getDesc());
+        if(gameBoard.getSquares()[player.getPlacement()]==gameBoard.getSquares()[18])
+        {
+            gameBoard.getSquares()[player.getPlacement()].function(player);
+            guiHandler.printMessage(gameBoard.getSquares()[18].getDesc());
+            gameBoard.getFields()[player.getPlacement()].setCar(player.getGuiPlayer(),true);
+        }
+        else {
+            gameBoard.getSquares()[player.getPlacement()].function(player);
+            gameBoard.getFields()[player.getPlacement()].setCar(player.getGuiPlayer(), true);
+            guiHandler.printMessage(gameBoard.getSquares()[player.getPlacement()].getDesc());
+        }
+
 
     }
 
