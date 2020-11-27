@@ -15,25 +15,23 @@ public class MoveToColor extends ChanceCard {
     private Color color1;
     private Color color2;
     private RuleSet ruleSet;
-    private GuiHandler guiHandler;
 
-    public MoveToColor(Color color1, Color color2, GameBoard gameBoard, RuleSet ruleSet, GuiHandler guiHandler)
+
+    public MoveToColor(Color color1, Color color2, GameBoard gameBoard, RuleSet ruleSet)
     {
         this.ruleSet = ruleSet;
         this.color1 = color1;
         this.color2 = color2;
         this.gameBoard = gameBoard;
-        this.guiHandler = guiHandler;
-        desc = "Du er landet på et Chance! Ryk til et felt af farven " + color1.toString() + " eller " + color2.toString();
+        desc = "Du er landet på et Chance! Ryk til et felt ";
     }
 
-    public MoveToColor(Color color1, GameBoard gameBoard, RuleSet ruleSet,GuiHandler guiHandler)
+    public MoveToColor(Color color1, GameBoard gameBoard, RuleSet ruleSet)
     {
         this.ruleSet = ruleSet;
         this.color1 = color1;
         this.gameBoard = gameBoard;
-        this.guiHandler = guiHandler;
-        desc = "Du er landet på et Chance! Ryk til et felt af farven " + color1.toString();
+        desc = "Du er landet på et Chance! Ryk til et felt ";
     }
 
     @Override
