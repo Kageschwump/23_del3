@@ -34,7 +34,7 @@ public class GameBoard {
         squares[2] = new Property("Pizzahuset",1,"Velkommen til Pizzahuset",Color.YELLOW, Color.black);
         squares[3] = new ChanceCardSquare(chanceCardHandler);
         squares[4] = new Property("Slik Butikken",1,"Take me to the Candy shop",Color.lightGray, Color.black);
-        squares[5] = new Property("Is Kiosken", 1,"Jeg have en gammeldags med 3 kugler",Color.lightGray, Color.black);
+        squares[5] = new Property("Is Kiosken", 1,"Jeg vil have en gammeldags med 3 kugler",Color.lightGray, Color.black);
         squares[6] = new VisitJailSquare();
         squares[7] = new Property("Museet",2, "Lad os se noget kultur",Color.magenta,Color.black);
         squares[8] = new Property("Bibliotek",2,"Viden er sundt, året rundt", Color.magenta,Color.black);
