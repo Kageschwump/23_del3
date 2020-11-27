@@ -1,7 +1,6 @@
 package Controller;
 
 import Model.ChanceCard;
-import Model.ChanceCards.JailFreeCard;
 import Model.ChanceCards.MoveNumOfFields;
 import Model.ChanceCards.MoveToColor;
 import Model.ChanceCards.PayCard;
@@ -9,28 +8,20 @@ import Model.GameBoard;
 import Model.Player.Player;
 import Model.RuleSet;
 
-import java.awt.*;
-
 public class ChanceCardHandler
 {
     private ChanceCard[] cards;
     private GameBoard gameBoard;
     private RuleSet ruleSet;
     private GuiHandler guiHandler;
-    private int numOfCards = 9;
 
-    public ChanceCardHandler(GameBoard gameBoard, RuleSet ruleSet, GuiHandler guiHandler)
+    public ChanceCardHandler()
     {
-        this.ruleSet = ruleSet;
-        this.gameBoard = gameBoard;
-        this.guiHandler = guiHandler;
-        cards = new ChanceCard[numOfCards];
-        createCards();
+        cards = new ChanceCard[9];
     }
 
     public void createCards()
     {
-
         cards[0] = new MoveNumOfFields(4);
         cards[1] = new MoveNumOfFields(4);
         cards[2] = new MoveNumOfFields(4);
@@ -44,9 +35,22 @@ public class ChanceCardHandler
 
     public void drawCard(Player player)
     {
-        int randomCard = ((int) Math.random() * numOfCards);
+        int randomCard = (int) (Math.random() * 9);
 
         cards[randomCard].cardFunction(player);
+    }
+
+
+    public void setGameBoard(GameBoard gameBoard) {
+        this.gameBoard = gameBoard;
+    }
+
+    public void setRuleSet(RuleSet ruleSet) {
+        this.ruleSet = ruleSet;
+    }
+
+    public void setGuiHandler(GuiHandler guiHandler) {
+        this.guiHandler = guiHandler;
     }
 
     // Ryk frem til farvet felt (Color) (y)

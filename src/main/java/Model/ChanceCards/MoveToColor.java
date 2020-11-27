@@ -29,12 +29,12 @@ public class MoveToColor extends ChanceCard {
     @Override
     public void cardFunction(Player player)
     {
-        int[] arrayOfPlacements = new int[2];
+        int[] arrayOfPlacements;
         String wishedPlacement;
 
         Color color = super.fromStringToColor(whichFieldColor);
         arrayOfPlacements = ruleSet.squaresOfSameColor(color);
-        wishedPlacement = guiHandler.getGui().getUserButtonPressed(totalDesc,gameBoard.getSquares()[0].getName(),gameBoard.getSquares()[1].getName());
+        wishedPlacement = guiHandler.getGui().getUserButtonPressed(totalDesc + "",gameBoard.getSquares()[arrayOfPlacements[0]].getName() + "",gameBoard.getSquares()[arrayOfPlacements[1]].getName() +"");
         for(int i = 0; i < gameBoard.getSquares().length; i++)
         {
             if(gameBoard.getSquares()[i].getName().equals(wishedPlacement))

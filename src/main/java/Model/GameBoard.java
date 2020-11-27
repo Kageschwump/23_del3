@@ -12,9 +12,9 @@ public class GameBoard {
     private GameSquare[] squares = new GameSquare[24];
     private ChanceCardHandler chanceCardHandler;
 
-    public GameBoard()
+    public GameBoard(ChanceCardHandler chanceCardHandler)
     {
-        createGameBoard();
+        this.chanceCardHandler = chanceCardHandler;
     }
 
     public GUI_Field[] createFields()
@@ -27,7 +27,7 @@ public class GameBoard {
         return fields;
     }
 
-    private void createGameBoard()
+    public void createGameBoard()
     {
         squares[0] = new StartSquare();
         squares[1] = new Property("Burger Baren",1,"Velkommen til Burger Baren",Color.YELLOW, Color.black);
@@ -64,7 +64,8 @@ public class GameBoard {
         return fields;
     }
 
-    public void setChanceCardHandler(ChanceCardHandler chanceCardHandler) {
-        this.chanceCardHandler = chanceCardHandler;
+    public ChanceCardHandler getChanceCardHandler()
+    {
+        return chanceCardHandler;
     }
 }
