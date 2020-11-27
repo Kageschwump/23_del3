@@ -20,7 +20,7 @@ public class ChanceCardHandler
 
     public ChanceCardHandler()
     {
-        cards = new ChanceCard[3];
+        cards = new ChanceCard[16];
     }
 
     public void createCards()
@@ -45,7 +45,7 @@ public class ChanceCardHandler
 
     public void drawCard(Player player)
     {
-        int randomCard = (int) (Math.random() * 3);
+        int randomCard = (int) (Math.random() * 16);
 
         cards[randomCard].cardFunction(player);
     }
