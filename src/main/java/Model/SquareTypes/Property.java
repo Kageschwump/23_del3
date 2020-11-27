@@ -2,7 +2,6 @@ package Model.SquareTypes;
 
 import Model.GameSquare;
 import Model.Player.Player;
-import Model.RuleSet;
 import gui_fields.GUI_Field;
 import gui_fields.GUI_Ownable;
 import gui_fields.GUI_Street;
@@ -18,9 +17,8 @@ public class Property extends GameSquare {
     private Color bgColor;
     private Color fgColor;
     private GUI_Ownable fieldType;
-    private RuleSet ruleSet;
 
-    public Property(String name, int price, String description, Color bgColor, Color fgColor, RuleSet ruleSet)
+    public Property(String name, int price, String description,Color bgColor, Color fgColor)
     {
         this.name = name;
         this.price = price;
@@ -28,7 +26,6 @@ public class Property extends GameSquare {
         this.description = description;
         this.bgColor = bgColor;
         this.fgColor = fgColor;
-        this.ruleSet = ruleSet;
 
         fieldType = new GUI_Street(name,priceString,description, priceString, bgColor,fgColor);
     }
@@ -52,19 +49,10 @@ public class Property extends GameSquare {
             fieldType.setBorder(player.getGuiPlayer().getPrimaryColor());
         }
         else if(player != owner){
-             if(ruleSet.checkForPropertyPair(owner,bgColor))
-             {
-                 player.getAccount().updateScore(-price * 2);
-                 player.getGuiPlayer().setBalance(player.getAccount().getBalance());
-                 owner.getAccount().updateScore(price * 2);
-                 owner.getGuiPlayer().setBalance(owner.getAccount().getBalance());
-             } else
-                 {
-                     player.getAccount().updateScore(-price);
-                     player.getGuiPlayer().setBalance(player.getAccount().getBalance());
-                     owner.getAccount().updateScore(price);
-                     owner.getGuiPlayer().setBalance(owner.getAccount().getBalance());
-                 }
+             player.getAccount().updateScore(-price);
+             player.getGuiPlayer().setBalance(player.getAccount().getBalance());
+             owner.getAccount().updateScore(price);
+             owner.getGuiPlayer().setBalance(owner.getAccount().getBalance());
         }
 
 
@@ -92,12 +80,6 @@ public class Property extends GameSquare {
     @Override
     public String getDesc() {
         return description;
-    }
-
-    @Override
-    public Player getOwner()
-    {
-        return owner;
     }
 
 }

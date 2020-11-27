@@ -46,8 +46,5 @@ public class ParkingSquare extends GameSquare {
         return bgColor;
     }
 
-    @Override
-    public Player getOwner() {
-        return null;
-    }
+
 }

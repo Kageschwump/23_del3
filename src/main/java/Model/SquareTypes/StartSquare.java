@@ -44,8 +44,5 @@ public class StartSquare extends GameSquare {
         return Color.white;
     }
 
-    @Override
-    public Player getOwner() {
-        return null;
-    }
+
 }

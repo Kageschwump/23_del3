@@ -49,9 +49,4 @@ public class PrisonSquare extends GameSquare {
     public Color getColor() {
         return bgColor;
     }
-
-    @Override
-    public Player getOwner() {
-        return null;
-    }
 }

@@ -18,7 +18,7 @@ public abstract class GameSquare {
 
     public abstract Color getColor();
 
-    public abstract Player getOwner();
+
 
 }
 
