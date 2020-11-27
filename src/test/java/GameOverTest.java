@@ -18,5 +18,7 @@ public class GameOverTest {
 
 
         Assert.assertEquals(ruleSet.determineWinner(players),players[1]);
+
+        //
     }
 }
