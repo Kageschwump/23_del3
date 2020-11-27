@@ -1,6 +1,7 @@
 package Controller;
 
 import Model.ChanceCard;
+import Model.ChanceCards.JailFreeCard;
 import Model.ChanceCards.MoveNumOfFields;
 import Model.ChanceCards.MoveToColor;
 import Model.ChanceCards.PayCard;
@@ -24,9 +25,22 @@ public class ChanceCardHandler
 
     public void createCards()
     {
-        cards[0] = new MoveToColor(Color.BLUE,gameBoard,ruleSet,guiHandler);
-        cards[1] = new MoveToColor(Color.YELLOW,gameBoard,ruleSet,guiHandler);
-        cards[2] = new MoveToColor(Color.lightGray,gameBoard,ruleSet,guiHandler);
+        cards[0] = new MoveToColor(Color.BLUE,gameBoard,ruleSet);
+        cards[1] = new MoveToColor(Color.YELLOW,gameBoard,ruleSet);
+        cards[2] = new MoveToColor(Color.lightGray,gameBoard,ruleSet);
+        cards[3] = new MoveToColor(Color.PINK, gameBoard, ruleSet);
+        cards[4] = new JailFreeCard(ruleSet);
+        cards[5] = new JailFreeCard(ruleSet);
+        cards[6] = new JailFreeCard(ruleSet);
+        cards[7] = new JailFreeCard(ruleSet);
+        cards[8] = new MoveNumOfFields(2,ruleSet);
+        cards[9] = new MoveNumOfFields(2,ruleSet);
+        cards[10] = new MoveNumOfFields(2,ruleSet);
+        cards[11] = new MoveNumOfFields(2,ruleSet);
+        cards[12] = new PayCard(2,"Du fandt penge på jorden",ruleSet);
+        cards[13] = new PayCard(-2, "Du har spist for meget slik",ruleSet);
+        cards[14] = new PayCard(-5, "Din pung blev stjålet",ruleSet);
+        cards[15] = new PayCard(5,"Du solgte en bil",ruleSet);
     }
 
     public void drawCard(Player player)
