@@ -1,5 +1,6 @@
 package Model;
 
+import Controller.ChanceCardHandler;
 import Model.Player.Player;
 
 import java.awt.*;
@@ -7,9 +8,11 @@ import java.awt.*;
 public class RuleSet {
 
     GameBoard gameBoard;
+    ChanceCardHandler chanceCardHandler;
 
-    public RuleSet(GameBoard gameBoard)
+    public RuleSet(GameBoard gameBoard, ChanceCardHandler chanceCardHandler)
     {
+        this.chanceCardHandler = chanceCardHandler;
         this.gameBoard = gameBoard;
     }
 
@@ -20,7 +23,7 @@ public class RuleSet {
         int placementsIndex = 0;
         for (int i = 0; i < gameBoard.getSquares().length; i++)
         {
-            if(color.toString() == (gameBoard.getSquares()[i].getColor().toString()))
+            if(color.equals(gameBoard.getSquares()[i].getColor()))
             {
                 placements[placementsIndex] = i;
                 placementsIndex++;
@@ -68,6 +71,10 @@ public class RuleSet {
             }
         }
         return winner;
+    }
+
+    public ChanceCardHandler getChanceCardHandler() {
+        return chanceCardHandler;
     }
 
 }

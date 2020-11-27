@@ -27,7 +27,7 @@ public class MoveToColor extends ChanceCard {
         desc = "Du er landet på et Chance! Ryk til et felt af farven " + color1.toString() + " eller " + color2.toString();
     }
 
-    public MoveToColor(Color color1, GameBoard gameBoard, RuleSet ruleSet, GuiHandler guiHandler)
+    public MoveToColor(Color color1, GameBoard gameBoard, RuleSet ruleSet,GuiHandler guiHandler)
     {
         this.ruleSet = ruleSet;
         this.color1 = color1;
@@ -49,16 +49,17 @@ public class MoveToColor extends ChanceCard {
     public void changePlayerPlacement(Player player, int[] placements)
     {
         String wishedPlacement;
-
+        wishedPlacement = ruleSet.getChanceCardHandler().getGuiHandler().getGui().getUserSelection(desc,gameBoard.getSquares()[placements[0]].getName(),gameBoard.getSquares()[placements[1]].getName());
         for(int i = 0; i < gameBoard.getSquares().length; i++)
         {
-            if(true)
+            if(wishedPlacement.equals(gameBoard.getSquares()[i].getName()))
             {
                 player.setPlacement(i);
+                gameBoard.getSquares()[player.getPlacement()].function(player);
+                break;
             }
         }
     }
-
 
     @Override
     public String getDesc() {

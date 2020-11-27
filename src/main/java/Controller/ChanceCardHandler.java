@@ -19,25 +19,19 @@ public class ChanceCardHandler
 
     public ChanceCardHandler()
     {
-        cards = new ChanceCard[9];
+        cards = new ChanceCard[3];
     }
 
     public void createCards()
     {
-        cards[0] = new MoveNumOfFields(4);
-        cards[1] = new MoveNumOfFields(4);
-        cards[2] = new MoveNumOfFields(4);
-        cards[3] = new MoveToColor(Color.BLUE,gameBoard,ruleSet,guiHandler);
-        cards[4] = new MoveToColor(Color.YELLOW,gameBoard,ruleSet,guiHandler);
-        cards[5] = new MoveToColor(Color.lightGray,gameBoard,ruleSet,guiHandler);
-        cards[6] = new PayCard(2, "Du får 2 penge af banken");
-        cards[7] = new PayCard(-2, "Din far straffer dig");
-        cards[8] = new PayCard(-2, "Betal tilbage på gæld");
+        cards[0] = new MoveToColor(Color.BLUE,gameBoard,ruleSet,guiHandler);
+        cards[1] = new MoveToColor(Color.YELLOW,gameBoard,ruleSet,guiHandler);
+        cards[2] = new MoveToColor(Color.lightGray,gameBoard,ruleSet,guiHandler);
     }
 
     public void drawCard(Player player)
     {
-        int randomCard = (int) (Math.random() * 9);
+        int randomCard = (int) (Math.random() * 3);
 
         cards[randomCard].cardFunction(player);
     }
@@ -49,6 +43,10 @@ public class ChanceCardHandler
 
     public void setRuleSet(RuleSet ruleSet) {
         this.ruleSet = ruleSet;
+    }
+
+    public GuiHandler getGuiHandler() {
+        return guiHandler;
     }
 
     public void setGuiHandler(GuiHandler guiHandler) {

@@ -20,7 +20,7 @@ public class GameHandler {
         this.chanceCardHandler = new ChanceCardHandler();
         this.dice = new Dice();
         this.gameBoard = new GameBoard(chanceCardHandler);
-        this.ruleset = new RuleSet(gameBoard);
+        this.ruleset = new RuleSet(gameBoard, chanceCardHandler);
     }
 
     public void round(Player player)
@@ -39,11 +39,11 @@ public class GameHandler {
     public void startGame()
     {
         gameBoard.getChanceCardHandler().setGameBoard(gameBoard);
-        gameBoard.getChanceCardHandler().setGuiHandler(guiHandler);
         gameBoard.getChanceCardHandler().setRuleSet(ruleset);
-        gameBoard.getChanceCardHandler().createCards();
         gameBoard.createGameBoard();
         guiHandler = new GuiHandler(gameBoard.createFields());
+        gameBoard.getChanceCardHandler().setGuiHandler(guiHandler);
+        gameBoard.getChanceCardHandler().createCards();
         playersSetup(guiHandler.playerCount());
         int starter = ruleset.determineStarter(playerHandler.getPlayers());
         guiHandler.printMessage(playerHandler.getPlayers()[starter].getName() + " starter");
