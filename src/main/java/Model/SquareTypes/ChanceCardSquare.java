@@ -49,4 +49,9 @@ public class ChanceCardSquare extends GameSquare {
     public Color getColor() {
         return bgColor;
     }
+
+    @Override
+    public Player getOwner() {
+        return null;
+    }
 }

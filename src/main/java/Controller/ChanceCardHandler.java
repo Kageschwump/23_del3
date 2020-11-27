@@ -33,10 +33,10 @@ public class ChanceCardHandler
         cards[5] = new JailFreeCard(ruleSet);
         cards[6] = new JailFreeCard(ruleSet);
         cards[7] = new JailFreeCard(ruleSet);
-        cards[8] = new MoveNumOfFields(2,ruleSet);
-        cards[9] = new MoveNumOfFields(2,ruleSet);
-        cards[10] = new MoveNumOfFields(2,ruleSet);
-        cards[11] = new MoveNumOfFields(2,ruleSet);
+        cards[8] = new MoveNumOfFields(2,ruleSet, gameBoard);
+        cards[9] = new MoveNumOfFields(2,ruleSet, gameBoard);
+        cards[10] = new MoveNumOfFields(2,ruleSet, gameBoard);
+        cards[11] = new MoveNumOfFields(2,ruleSet, gameBoard);
         cards[12] = new PayCard(2,"Du fandt penge på jorden",ruleSet);
         cards[13] = new PayCard(-2, "Du har spist for meget slik",ruleSet);
         cards[14] = new PayCard(-5, "Din pung blev stjålet",ruleSet);
@@ -65,6 +65,11 @@ public class ChanceCardHandler
 
     public void setGuiHandler(GuiHandler guiHandler) {
         this.guiHandler = guiHandler;
+    }
+
+    public RuleSet getRuleSet()
+    {
+        return ruleSet;
     }
 
     // Ryk frem til farvet felt (Color) (y)

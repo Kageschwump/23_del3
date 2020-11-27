@@ -16,6 +16,17 @@ public class RuleSet {
         this.gameBoard = gameBoard;
     }
 
+    public boolean checkForPropertyPair(Player player, Color color)
+    {
+        int[] pair;
+        pair = squaresOfSameColor(color);
+        if(gameBoard.getSquares()[pair[0]].getOwner().getId() == gameBoard.getSquares()[pair[1]].getOwner().getId())
+        {
+            return true;
+        }
+        return false;
+    }
+
     public int[] squaresOfSameColor(Color color)
     {
         int[] placements = new int[2];
