@@ -1,7 +1,6 @@
 package Model.SquareTypes;
 
 import Controller.ChanceCardHandler;
-import Model.ChanceCard;
 import Model.GameSquare;
 import Model.Player.Player;
 import gui_fields.GUI_Chance;
@@ -30,12 +29,6 @@ public class ChanceCardSquare extends GameSquare {
     {
         chanceCardHandler.drawCard(player);
     }
-
-    public void createChanceCards()
-    {
-
-    }
-
 
     @Override
     public String getName() {

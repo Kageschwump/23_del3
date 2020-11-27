@@ -15,11 +15,11 @@ public class MoveNumOfFields extends ChanceCard {
 
     @Override
     public void cardFunction(Player player) {
-        player.setPlacement(numOfFields);
+        player.updatePlacement(numOfFields);
     }
 
     @Override
     public String getDesc() {
-        return null;
+        return desc;
     }
 }

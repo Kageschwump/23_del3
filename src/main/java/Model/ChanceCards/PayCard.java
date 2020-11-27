@@ -5,16 +5,22 @@ import Model.Player.Player;
 
 public class PayCard extends ChanceCard {
 
-    private String desc = "Du har spist for meget slik! Betal 2 til banken";
+    private String desc;
+    int payAmount;
+
+    public PayCard(int payAmount, String desc)
+    {
+        this.desc = desc;
+        this.payAmount = payAmount;
+    }
 
     @Override
     public void cardFunction(Player player) {
-        player.getAccount().updateScore(-2);
-        player.getGuiPlayer().setBalance(player.getAccount().getBalance());
+        player.getAccount().updateScore(payAmount);
     }
 
     @Override
     public String getDesc() {
-        return desc;
+        return desc + ". " + payAmount;
     }
 }
