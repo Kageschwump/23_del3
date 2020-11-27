@@ -8,7 +8,7 @@ import Model.RuleSet;
 public class MoveNumOfFields extends ChanceCard {
 
     private int numOfFields;
-    private String desc = "Chance! Ryk " + numOfFields + " felter";
+    private String desc = "Chance! du rykker nogle felter frem:";
     private RuleSet ruleSet;
     private GameBoard gameBoard;
 
@@ -22,7 +22,7 @@ public class MoveNumOfFields extends ChanceCard {
     @Override
     public void cardFunction(Player player) {
         player.updatePlacement(numOfFields);
-        ruleSet.getChanceCardHandler().getGuiHandler().printMessage(desc);
+        ruleSet.getChanceCardHandler().getGuiHandler().printMessage(desc + " " + numOfFields);
         gameBoard.getSquares()[player.getPlacement()].function(player);
     }
 

@@ -20,7 +20,7 @@ public class PayCard extends ChanceCard {
     @Override
     public void cardFunction(Player player) {
         player.getAccount().updateScore(payAmount);
-        ruleSet.getChanceCardHandler().getGuiHandler().printMessage(desc + " " + payAmount);
+        ruleSet.getChanceCardHandler().getGuiHandler().printMessage(desc + " " + payAmount + " penge");
     }
 
     @Override

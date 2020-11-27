@@ -35,12 +35,12 @@ public class ChanceCardHandler
         cards[7] = new JailFreeCard(ruleSet);
         cards[8] = new MoveNumOfFields(2,ruleSet, gameBoard);
         cards[9] = new MoveNumOfFields(2,ruleSet, gameBoard);
-        cards[10] = new MoveNumOfFields(2,ruleSet, gameBoard);
-        cards[11] = new MoveNumOfFields(2,ruleSet, gameBoard);
-        cards[12] = new PayCard(2,"Du fandt penge på jorden",ruleSet);
-        cards[13] = new PayCard(-2, "Du har spist for meget slik",ruleSet);
-        cards[14] = new PayCard(-5, "Din pung blev stjålet",ruleSet);
-        cards[15] = new PayCard(5,"Du solgte en bil",ruleSet);
+        cards[10] = new MoveNumOfFields(4,ruleSet, gameBoard);
+        cards[11] = new MoveNumOfFields(4,ruleSet, gameBoard);
+        cards[12] = new PayCard(2,"Du fandt penge på jorden, du fandt ",ruleSet);
+        cards[13] = new PayCard(-2, "Du har spist for meget slik, du betaler",ruleSet);
+        cards[14] = new PayCard(-5, "Din pung blev stjålet, du mister",ruleSet);
+        cards[15] = new PayCard(5,"Du solgte en bil, du tjener",ruleSet);
     }
 
     public void drawCard(Player player)

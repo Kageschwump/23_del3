@@ -6,7 +6,7 @@ import Model.RuleSet;
 
 public class JailFreeCard extends ChanceCard {
 
-    private String desc = "Du løslades næste gang uden omkostninger";
+    private String desc = "Chance! Du løslades næste gang uden omkostninger";
     private RuleSet ruleSet;
 
     public JailFreeCard(RuleSet ruleSet)

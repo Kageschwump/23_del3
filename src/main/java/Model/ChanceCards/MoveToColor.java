@@ -23,7 +23,7 @@ public class MoveToColor extends ChanceCard {
         this.color1 = color1;
         this.color2 = color2;
         this.gameBoard = gameBoard;
-        desc = "Du er landet på et Chance! Ryk til et felt ";
+        desc = "Du er landet på en Chance! du må rykke til et af følgende felter! ";
     }
 
     public MoveToColor(Color color1, GameBoard gameBoard, RuleSet ruleSet)
@@ -31,7 +31,7 @@ public class MoveToColor extends ChanceCard {
         this.ruleSet = ruleSet;
         this.color1 = color1;
         this.gameBoard = gameBoard;
-        desc = "Du er landet på et Chance! Ryk til et felt ";
+        desc = "Du er landet på en Chance! du må rykke til et af følgende felter! ";
     }
 
     @Override
