@@ -20,7 +20,7 @@ public class RuleSet {
         int placementsIndex = 0;
         for (int i = 0; i < gameBoard.getSquares().length; i++)
         {
-            if(color == gameBoard.getSquares()[i].getColor())
+            if(color.toString().equals(gameBoard.getSquares()[i].getColor().toString()))
             {
                 placements[placementsIndex] = i;
                 placementsIndex++;

@@ -10,34 +10,48 @@ import java.awt.*;
 
 public class MoveToColor extends ChanceCard {
 
-    private String desc = "Du er landet på et Chance! Ryk til et felt af farven ";
-    private String totalDesc;
-    private String whichFieldColor;
+    private String desc;
     private GameBoard gameBoard;
+    private Color color1;
+    private Color color2;
     private RuleSet ruleSet;
     private GuiHandler guiHandler;
 
-    public MoveToColor(String whichFieldColor, GameBoard gameBoard, RuleSet ruleSet, GuiHandler guiHandler)
+    public MoveToColor(Color color1, Color color2, GameBoard gameBoard, RuleSet ruleSet, GuiHandler guiHandler)
     {
         this.ruleSet = ruleSet;
-        this.whichFieldColor = whichFieldColor;
+        this.color1 = color1;
+        this.color2 = color2;
         this.gameBoard = gameBoard;
         this.guiHandler = guiHandler;
-        totalDesc = desc + whichFieldColor;
+        desc = "Du er landet på et Chance! Ryk til et felt af farven " + color1.toString() + " eller " + color2.toString();
+    }
+
+    public MoveToColor(Color color1, GameBoard gameBoard, RuleSet ruleSet, GuiHandler guiHandler)
+    {
+        this.ruleSet = ruleSet;
+        this.color1 = color1;
+        this.gameBoard = gameBoard;
+        this.guiHandler = guiHandler;
+        desc = "Du er landet på et Chance! Ryk til et felt af farven " + color1.toString();
     }
 
     @Override
     public void cardFunction(Player player)
     {
-        int[] arrayOfPlacements;
-        String wishedPlacement;
+        int[] arrayOfPlacements1;
 
-        Color color = super.fromStringToColor(whichFieldColor);
-        arrayOfPlacements = ruleSet.squaresOfSameColor(color);
-        wishedPlacement = guiHandler.getGui().getUserButtonPressed(totalDesc + "",gameBoard.getSquares()[arrayOfPlacements[0]].getName() + "",gameBoard.getSquares()[arrayOfPlacements[1]].getName() +"");
+        arrayOfPlacements1 = ruleSet.squaresOfSameColor(color1);
+        changePlayerPlacement(player,arrayOfPlacements1);
+
+    }
+
+    public void changePlayerPlacement(Player player)
+    {
+        String wishedPlacement;
         for(int i = 0; i < gameBoard.getSquares().length; i++)
         {
-            if(gameBoard.getSquares()[i].getName().equals(wishedPlacement))
+            if()
             {
                 player.setPlacement(i);
             }
@@ -47,6 +61,6 @@ public class MoveToColor extends ChanceCard {
 
     @Override
     public String getDesc() {
-        return totalDesc;
+        return desc;
     }
 }
